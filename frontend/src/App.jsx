@@ -5,6 +5,7 @@ import MachineCard from './components/MachineCard';
 import ParameterControls from './components/ParameterControls';
 import TelemetryScreen from './components/TelemetryScreen';
 import AssistantAdvice from './components/AssistantAdvice';
+import OperatorChatBot from './components/OperatorChatBot';
 import { ShieldCheck, HardHat } from 'lucide-react';
 
 const CATEGORIES = [
@@ -280,6 +281,12 @@ export default function App() {
           />
         </div>
       </div>
+
+      {/* Floating Bottom-Right Operator RAG Chatbot */}
+      <OperatorChatBot
+        currentMachine={currentMachine}
+        currentTask={currentTask}
+      />
     </div>
   );
 }

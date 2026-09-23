@@ -1,0 +1,604 @@
+[
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "Overview",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 Overview]\n# Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "1. Machine Overview & Technical Specifications",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 1. Machine Overview & Technical Specifications]\n## 1. Machine Overview & Technical Specifications\nThe **CAT 140 All-Wheel Drive Motor Grader** is the industry standard for precision finish grading, road sub-base preparation, bank sloping, ditching, and snow clearing.\n\n- **Machine Model**: CAT 140 AWD\n- **Category**: Precision Grading & Surface Finishing\n- **Engine**: Cat C9.3 ACERT Turbocharged Tier 4 Final Diesel\n- **Net Flywheel Power**: 250 HP (186 kW)\n- **Operating Weight**: 19,135 kg (42,185 lbs)\n- **Moldboard Length**: 4.2 meters (14 ft)\n- **Drive System**: 6x6 All-Wheel Drive with Front Wheel Creep Mode\n- **Transmission**: Direct Drive Powershift, 8 Forward / 6 Reverse speeds\n- **Standard Base Fuel Burn Rate**: 17.5 L/hr\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "2. Universal Cab Controls & Engine Tuning",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 2. Universal Cab Controls & Engine Tuning]\n## 2. Universal Cab Controls & Engine Tuning\nThe cab provides advanced electro-hydraulic 3-axis joysticks replacing 15 mechanical levers, providing fingertip control over circle drive, moldboard tilt, side-shift, wheel lean, and articulation."
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "2.1 Power Modes",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 2.1 Power Modes]\n### 2.1 Power Modes\n1. **Eco Mode (Standard Recommended for Finish Grading)**:\n   - Limits engine speed to a controlled, steady output band.\n   - Prevents sudden power surges and hydraulic pulsations that cause moldboard bounce.\n   - Saves 10%\u201315% fuel during continuous grading runs.\n2. **Smart Mode**:\n   - Balances fuel economy with hydraulic responsiveness during heavy cuts or mixing passes.\n   - Ideal for gravel road reclamation, ripping hard-packed dirt, and heavy ditch shaping.\n3. **Power Mode**:\n   - Full power output across all drive axles.\n   - Used for heavy snow plowing and deep ripper passes. Not recommended for fine finish grading as high wheel speed induces surface washboarding."
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "2.2 Engine Throttle RPM Dial",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 2.2 Engine Throttle RPM Dial]\n### 2.2 Engine Throttle RPM Dial\n- **Operating RPM Band**: 1200 to 2000 RPM.\n- **Factory Default**: 1600 RPM.\n- **Tuning Rule**: For precision sub-base finish grading, set engine throttle strictly between **1500 and 1600 RPM**. Excessive engine speed causes the moldboard to bounce over hard aggregates, creating washboarding ripples."
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "2.3 Joystick Speed / Hydraulic Response",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 2.3 Joystick Speed / Hydraulic Response]\n### 2.3 Joystick Speed / Hydraulic Response\n1. **Fine (Essential for Precision Finish)**:\n   - Dampens moldboard cylinder speeds to deliver micro-millimeter elevation corrections.\n   - Required to hit tight \u00b15mm highway finish tolerances.\n2. **Medium**:\n   - Standard response for rough grading and gravel spreading.\n3. **Quick**:\n   - Rapid moldboard positioning. Should only be used for rapid transport or snow clearing.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "3. Machine-Specific Cab Signature Controls",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 3. Machine-Specific Cab Signature Controls]\n## 3. Machine-Specific Cab Signature Controls"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "3.1 Moldboard Blade Angle (`blade_angle`)",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 3.1 Moldboard Blade Angle (`blade_angle`)]\n### 3.1 Moldboard Blade Angle (`blade_angle`)\nThe blade angle dictates material roll and side windrow discharge:\n1. **Spread 25\u00b0 (Spreading & Material Cast)**:\n   - Sets blade nearly perpendicular to machine travel (25-degree pitch).\n   - Keeps material in front of the blade for bulk spreading and leveling haul truck dumps.\n2. **Normal 35\u00b0 (Finish Grade Recommended)**:\n   - Optimal 35-degree cutting angle.\n   - Allows aggregate to roll smoothly across the moldboard face and discharge cleanly off the trailing heel without stalling or spilling over the top.\n3. **Deep Cut 45\u00b0 (Ditching & Heavy Trench Cut)**:\n   - Sharp 45-degree angle.\n   - Slices deeply into dense clay, cutting ditches or peeling away stubborn road berms."
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "3.2 Working Transmission Gear (`working_gear`)",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 3.2 Working Transmission Gear (`working_gear`)]\n### 3.2 Working Transmission Gear (`working_gear`)\nTransmission gear selection controls travel ground speed and blade chatter:\n1. **1st Gear (Fine Finish / Tight Tolerances)**:\n   - Travel speed: 3.5 to 5.0 km/h.\n   - Required for airport runway foundations, laser-guided building slabs, and sub-centimeter highway finish tolerances.\n2. **2nd Gear (Normal Run / Highway Sub-Base)**:\n   - Travel speed: 5.5 to 7.5 km/h.\n   - Standard working gear for long highway sub-base leveling and county road maintenance.\n3. **3rd Gear (Fast Spreading Warning)**:\n   - Travel speed: 9.0 to 12.0 km/h.\n   - ONLY for high-speed material spreading or snow plowing.\n   - CRITICAL WARNING: Running in 3rd gear during finish grading causes severe blade chatter and washboarding ripples across the sub-base, ruining the surface and requiring total rework.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "4. Integrated Caterpillar Smart Technology",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 4. Integrated Caterpillar Smart Technology]\n## 4. Integrated Caterpillar Smart Technology"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "4.1 Cat Grade with Cross Slope",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 4.1 Cat Grade with Cross Slope]\n### 4.1 Cat Grade with Cross Slope\n- Fully integrated grade control system that automates one side of the moldboard.\n- The operator controls one side manually while the system automatically maintains the exact target cross slope percentage (e.g. 2.0% highway crown)."
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "4.2 Cat Stable Blade",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 4.2 Cat Stable Blade]\n### 4.2 Cat Stable Blade\n- Detects machine bounce before the operator feels it and automatically adjusts engine throttle to settle the machine.\n- Eliminates operator-induced washboard ripples."
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "4.3 Front Wheel Lean & Frame Articulation",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 4.3 Front Wheel Lean & Frame Articulation]\n### 4.3 Front Wheel Lean & Frame Articulation\n- Leaning front wheels into the windrow resists side draft forces created by the angled blade.\n- Articulating the frame offsets the rear drive tandems onto dry, compacted ground for maximum traction.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "5. Job Site Task Procedures & Operational Guidelines",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 5. Job Site Task Procedures & Operational Guidelines]\n## 5. Job Site Task Procedures & Operational Guidelines"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "Task 1: Highway Sub-Base Finish Grading (Tight \u00b15mm Finish)",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 Task 1: Highway Sub-Base Finish Grading (Tight \u00b15mm Finish)]\n### Task 1: Highway Sub-Base Finish Grading (Tight \u00b15mm Finish)\n- **Objective**: Smooth 1.2 km of crushed stone base course to strict \u00b15mm elevation tolerance within 35 minutes.\n- **Optimal Configuration**:\n  - Power Mode: **Eco**\n  - Engine RPM: **1550 RPM**\n  - Joystick Response: **Fine**\n  - Blade Angle: **Normal 35\u00b0**\n  - Working Gear: **2nd Gear**\n  - Cat Grade with Cross Slope: **ON**\n- **Operator Technique**: Lean front wheels slightly toward the heel of the blade to counter side draft. Keep material rolling in a steady continuous windrow off the toe to the heel. Do not shift into 3rd gear."
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "Task 2: Airport Runway Apron Precision Leveling",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 Task 2: Airport Runway Apron Precision Leveling]\n### Task 2: Airport Runway Apron Precision Leveling\n- **Objective**: Grade a 500-meter aircraft apron slab foundation in Engineered Aggregate.\n- **Optimal Configuration**:\n  - Power Mode: **Eco**\n  - Engine RPM: **1600 RPM**\n  - Joystick Response: **Fine**\n  - Blade Angle: **Normal 35\u00b0**\n  - Working Gear: **1st Gear**\n- **Operator Technique**: 1st Gear provides the slow, steady ground speed necessary to guarantee strict laser-flat grade across the entire apron width.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual",
+    "filename": "cat_140_motor_grader_manual.md",
+    "machine_id": "CAT-140",
+    "section": "6. Safety, Component Care & Washboard Prevention",
+    "text": "[Caterpillar 140 All-Wheel Drive Motor Grader \u2014 Operator Training Manual \u2014 6. Safety, Component Care & Washboard Prevention]\n## 6. Safety, Component Care & Washboard Prevention\n- **Eliminating Washboarding**: Washboarding occurs when grader travel speed is too high for the engine RPM and blade load. If ripples appear, immediately downshift to 2nd or 1st gear and reduce RPM to 1550.\n- **Moldboard Cutting Edge Wear**: Replace bolt-on cutting edges before wear reaches the moldboard base plate. Rotate edges end-to-end to maximize wear life."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "Overview",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 Overview]\n# Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "1. Machine Overview & Technical Specifications",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 1. Machine Overview & Technical Specifications]\n## 1. Machine Overview & Technical Specifications\nThe **CAT 320 Next Gen Hydraulic Excavator** is an industry-standard 22.5-ton earthmoving platform engineered for maximum digging precision, fuel economy, and operator efficiency.\n\n- **Machine Model**: CAT 320 Next Gen\n- **Category**: Earth Excavation\n- **Engine**: Cat C4.4 ACERT Tier 4 Final / Stage V Diesel\n- **Net Flywheel Power**: 174 HP (129 kW)\n- **Operating Weight**: 22,500 kg (49,600 lbs)\n- **Standard Bucket Capacity**: 1.19 m\u00b3 (1.56 yd\u00b3)\n- **Hydraulic System Flow**: 429 L/min (113 gal/min)\n- **Maximum Dig Depth**: 6.72 meters\n- **Standard Base Fuel Burn Rate**: 16.5 L/hr\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "2. Universal Cab Controls & Engine Tuning",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 2. Universal Cab Controls & Engine Tuning]\n## 2. Universal Cab Controls & Engine Tuning\nThe cab features an intuitive touchscreen monitor, electro-hydraulic proportional joysticks, and a rotary engine throttle dial."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "2.1 Power Modes",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 2.1 Power Modes]\n### 2.1 Power Modes\n1. **Eco Mode**:\n   - Reduces engine throttle and hydraulic displacement to prioritize fuel conservation.\n   - Recommended for light trenching, soft sand casting, and grading passes.\n   - Burns approximately 15% less diesel than Smart Mode.\n2. **Smart Mode (Standard Recommended)**:\n   - Automatically matches engine RPM and hydraulic output to current ground digging resistance.\n   - Provides peak hydraulic flow during hard bucket penetration and lowers engine speed during swing and dumping phases.\n   - Ideal for general earth excavation, foundation digging, and mixed soils.\n3. **Power Mode**:\n   - Delivers continuous peak hydraulic pressure (35,000 kPa) and maximum engine power.\n   - Reserved strictly for high-resistance breakout in hard compacted rock, cemented shale, or deep frost.\n   - Higher fuel consumption and increased thermal strain on hydraulic oil."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "2.2 Engine Throttle RPM Dial",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 2.2 Engine Throttle RPM Dial]\n### 2.2 Engine Throttle RPM Dial\n- **Operating RPM Band**: 1200 to 2000 RPM.\n- **Factory Default**: 1750 RPM.\n- **Tuning Rule**: For compacted clay and foundation excavation, set throttle between **1800 and 1850 RPM** in Smart Mode. Operating beyond 1900 RPM on light material wastes diesel without shortening cycle times."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "2.3 Joystick Speed / Hydraulic Response",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 2.3 Joystick Speed / Hydraulic Response]\n### 2.3 Joystick Speed / Hydraulic Response\n1. **Fine**: Dampens electro-hydraulic valve actuation for millimeter-precise trench floor finishing and working around utility lines.\n2. **Medium**: Standard balanced response providing predictable boom, stick, and bucket modulation.\n3. **Quick**: Opens electro-hydraulic spool valves rapidly for aggressive, high-speed excavation cycles and truck loading.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "3. Machine-Specific Cab Signature Controls",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 3. Machine-Specific Cab Signature Controls]\n## 3. Machine-Specific Cab Signature Controls"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "3.1 Bucket Target Fill Level (`payload_target_pct`)",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 3.1 Bucket Target Fill Level (`payload_target_pct`)]\n### 3.1 Bucket Target Fill Level (`payload_target_pct`)\n- **Tuning Range**: 50% to 110% (Default: 90%).\n- **Underloading Penalty (<75%)**: Causes cycle inefficiency; operator requires unnecessary additional passes, dragging out mission completion time.\n- **Optimal Target (90%\u201395%)**: Delivers optimal heaped bucket fill without spilling material over the side cutters during swing acceleration.\n- **Overloading Penalty (>102%)**: Causes material spillage onto track chains, destabilizes machine equilibrium, and induces hydraulic pressure spikes."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "3.2 Valve Flow Priority (`dig_priority`)",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 3.2 Valve Flow Priority (`dig_priority`)]\n### 3.2 Valve Flow Priority (`dig_priority`)\nThe CAT 320 Next Gen features electro-hydraulic priority valves that route oil flow according to job demands:\n1. **Balanced (Standard)**:\n   - Equalized hydraulic flow distributed across boom raise, stick crowd, and swing motors.\n   - Recommended for typical 90-degree truck loading, footing excavation, and foundation digs.\n2. **Swing Priority**:\n   - Directs valve priority to the hydraulic swing motor.\n   - Speeds up the swing-to-dump cycle by up to 12% when bulk casting loose material or working large spoil piles.\n3. **Boom Power**:\n   - Diverts primary hydraulic flow to the dual boom lift cylinders and stick cylinder.\n   - Maximizes breakout force for hard rocky ground, compacted shale, and prying embedded boulders.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "4. Integrated Caterpillar Smart Technology",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 4. Integrated Caterpillar Smart Technology]\n## 4. Integrated Caterpillar Smart Technology"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "4.1 Cat Grade Assist",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 4.1 Cat Grade Assist]\n### 4.1 Cat Grade Assist\n- Automates boom, stick, and bucket movements to guide the cutting edge precisely along predefined grade plans.\n- Eliminates over-digging and rework. Guarantees flat trench bottoms and specified slope angles."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "4.2 2D E-Fence Safety Boundaries",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 4.2 2D E-Fence Safety Boundaries]\n### 4.2 2D E-Fence Safety Boundaries\n- Digital virtual boundaries that restrict excavator motion:\n  - **Ceiling E-Fence**: Prevents boom contact with overhead power lines or facility roofs.\n  - **Floor E-Fence**: Prevents bucket teeth from digging below underground utilities.\n  - **Swing E-Fence**: Prevents the tail swing or boom from swinging into highway traffic lanes."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "4.3 Cat Production Measurement (Payload)",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 4.3 Cat Production Measurement (Payload)]\n### 4.3 Cat Production Measurement (Payload)\n- Calculates real-time bucket payload weight on the go.\n- Prevents truck overloading and underloading at the excavation pit.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "5. Job Site Task Procedures & Operational Guidelines",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 5. Job Site Task Procedures & Operational Guidelines]\n## 5. Job Site Task Procedures & Operational Guidelines"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "Task 1: Commercial Foundation Pit Excavation (Foundation Earthmoving)",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 Task 1: Commercial Foundation Pit Excavation (Foundation Earthmoving)]\n### Task 1: Commercial Foundation Pit Excavation (Foundation Earthmoving)\n- **Objective**: Excavate 450 m\u00b3 of dry, compacted clay to a uniform depth.\n- **Optimal Configuration**:\n  - Power Mode: **Smart**\n  - Engine RPM: **1850 RPM**\n  - Joystick Response: **Quick**\n  - Bucket Fill: **95%**\n  - Dig Priority: **Balanced**\n  - Cat Grade Assist: **ON**\n- **Operator Technique**: Dig in benches of 1.5 to 2.0 meters. Maintain a 60\u201390 degree swing angle to the spoil pile to minimize cycle time."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "Task 2: Deep Basement Excavation in Hard Shale & Rock",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 Task 2: Deep Basement Excavation in Hard Shale & Rock]\n### Task 2: Deep Basement Excavation in Hard Shale & Rock\n- **Objective**: Break out heavy, dense shale without stalling hydraulics.\n- **Optimal Configuration**:\n  - Power Mode: **Smart** (or Power if penetration stalls)\n  - Engine RPM: **1800 RPM**\n  - Joystick Response: **Medium**\n  - Dig Priority: **Boom Power**\n- **Operator Technique**: Avoid prying or hammering with bucket teeth. Use Boom Power priority to curl the bucket through natural rock bedding planes."
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "Task 3: Wet Drainage Canal Excavation",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 Task 3: Wet Drainage Canal Excavation]\n### Task 3: Wet Drainage Canal Excavation\n- **Objective**: Clean canal bed during rainfall without slumping banks.\n- **Optimal Configuration**:\n  - Power Mode: **Eco**\n  - Engine RPM: **1650 RPM**\n  - Joystick Response: **Medium**\n  - Bucket Fill: **85%**\n- **Operator Technique**: Position tracks parallel to the canal bank on firm timber mats. Reduce throttle to prevent track slip and avoid shaking canal sidewalls loose.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual",
+    "filename": "cat_320_excavator_manual.md",
+    "machine_id": "CAT-320",
+    "section": "6. Safety, Thermal Management & Fuel Economy",
+    "text": "[Caterpillar 320 Next Gen Hydraulic Excavator \u2014 Operator Training Manual \u2014 6. Safety, Thermal Management & Fuel Economy]\n## 6. Safety, Thermal Management & Fuel Economy\n- **Hydraulic Overheating Alert**: Continuous operation above 1850 RPM in high ambient temperatures (>30\u00b0C) elevates hydraulic oil temperature beyond 85\u00b0C. Back off throttle to 1700 RPM if thermal warnings sound.\n- **Fuel Saving Habit**: Never leave the machine idling above 1000 RPM. Cat Auto-Idle automatically drops engine speed to 900 RPM after 5 seconds of joystick inactivity.\n- **Undercarriage Wear**: Do not spin tracks when digging into hard embankments. Position the idlers forward toward the work area for maximum stability."
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "Overview",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 Overview]\n# Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "1. Machine Overview & Technical Specifications",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 1. Machine Overview & Technical Specifications]\n## 1. Machine Overview & Technical Specifications\nThe **CAT 349 High-Reach Demolition Excavator** is a heavy 53.2-ton specialized machine engineered for structural demolition, reinforced concrete shearing, rock breaking, and industrial dismantling.\n\n- **Machine Model**: CAT 349 Demolition\n- **Category**: Demolition & High-Reach Processing\n- **Engine**: Cat C13 ACERT Tier 4 Final / Stage V Diesel\n- **Net Flywheel Power**: 432 HP (322 kW)\n- **Operating Weight**: 53,200 kg (117,300 lbs)\n- **High-Reach Boom Height**: Up to 28 meters vertical reach\n- **Auxiliary Hydraulic Tool Flow**: Up to 570 L/min dedicated high-pressure flow\n- **Reinforced Structure**: FOGS (Falling Object Guard Structure) protected cab with impact-resistant polycarbonate glass\n- **Standard Base Fuel Burn Rate**: 34.0 L/hr\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "2. Universal Cab Controls & Engine Tuning",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 2. Universal Cab Controls & Engine Tuning]\n## 2. Universal Cab Controls & Engine Tuning\nThe cab provides an ergonomic control station with tilting cab (up to 30 degrees) for overhead structural viewing, auxiliary thumb rollers on joysticks, and an advanced electronic attachment control system."
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "2.1 Power Modes",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 2.1 Power Modes]\n### 2.1 Power Modes\n1. **Eco Mode**:\n   - Useful during ground sorting, site cleanup, and loading processed rebar into dumpsters.\n   - Not recommended during active concrete shearing as hydraulic cycle times become sluggish.\n2. **Smart Mode (Standard Recommended)**:\n   - Senses when hydraulic shears or hammers engage heavy concrete and instantly delivers full hydraulic pump displacement.\n   - Automatically settles engine RPM between bites to prevent hydraulic oil boiling.\n3. **Power Mode**:\n   - Full unrestricted hydraulic output.\n   - Use with extreme caution on machines older than 5 years: continuous operation in Power Mode trips hydraulic relief valves and can blow cylinder packings."
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "2.2 Engine Throttle RPM Dial",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 2.2 Engine Throttle RPM Dial]\n### 2.2 Engine Throttle RPM Dial\n- **Operating RPM Band**: 1300 to 2200 RPM.\n- **Factory Default**: 1800 RPM.\n- **Tuning Rule**: Lock throttle between **1750 and 1800 RPM** in Smart Mode. Revving above 1900 RPM while running continuous high-flow hydraulic attachments generates severe thermal build-up without accelerating jaw cutting speed."
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "2.3 Joystick Speed / Hydraulic Response",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 2.3 Joystick Speed / Hydraulic Response]\n### 2.3 Joystick Speed / Hydraulic Response\n1. **Fine**: Critical when precision-shearing steel I-beams or dismantling structural columns adjacent to occupied public areas.\n2. **Medium (Recommended)**: Balanced flow for primary concrete pulverizers and universal shears.\n3. **Quick**: Fast boom response. Only recommended during ground-level rubble sorting.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "3. Machine-Specific Cab Signature Controls",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 3. Machine-Specific Cab Signature Controls]\n## 3. Machine-Specific Cab Signature Controls"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "3.1 Attachment Hydraulic Flow (`tool_flow_rate`)",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 3.1 Attachment Hydraulic Flow (`tool_flow_rate`)]\n### 3.1 Attachment Hydraulic Flow (`tool_flow_rate`)\nControls the volume of oil delivered through the dedicated auxiliary circuits to the front attachment:\n1. **Low Flow (Light Breakers & Hydraulic Hammers)**:\n   - Optimized for piston-type hydraulic hammers and impact breakers.\n   - Prevents hydraulic fluid cavitation and piston seal blowouts.\n2. **Medium Flow (Universal Processors & Pulverizers)**:\n   - Delivers moderate flow and high pressure to secondary concrete crushers.\n   - Ideal for separating rebar from demolished slab sections on the ground.\n3. **High Flow (Heavy Hydraulic Concrete Shears)**:\n   - Delivers full dual-pump auxiliary flow (500+ L/min) to massive steel and concrete shears (e.g. Cat S3050).\n   - Provides the cutting speed needed to chew through reinforced structural columns within job schedules."
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "3.2 Tool Work Duty Cycle (`duty_cycle_pct`)",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 3.2 Tool Work Duty Cycle (`duty_cycle_pct`)]\n### 3.2 Tool Work Duty Cycle (`duty_cycle_pct`)\nControls the ratio of active tool hammering/shearing versus hydraulic rest intervals:\n- **Tuning Range**: 65% to 100% (Default: 85%).\n- **Cautious (65%\u201375%)**: Recommended during hot weather or when operating high-hour (5+ year old) machinery to prevent thermal oil breakdown.\n- **Steady (80%\u201385%)**: Industry best practice. Provides 8.5 minutes of active cutting out of every 10 minutes, allowing hydraulic oil to circulate through the oil coolers.\n- **Continuous (95%\u2013100%)**:\n  - DANGER on older machines: Continuous hammering without rest intervals superheats the hydraulic oil above 95\u00b0C, destroys cylinder wiper seals, and trips hydraulic relief alarms.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "4. Integrated Caterpillar Smart Technology",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 4. Integrated Caterpillar Smart Technology]\n## 4. Integrated Caterpillar Smart Technology"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "4.1 Cat Hydraulic Relief Thermal Protection",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 4.1 Cat Hydraulic Relief Thermal Protection]\n### 4.1 Cat Hydraulic Relief Thermal Protection\n- Electronic pressure relief monitor that detects excessive back-pressure and oil temperature spikes.\n- Automatically vents hydraulic circuits to the tank and sounds a cab alarm before cylinder packings rupture."
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "4.2 Cat Heavy Lift Mode",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 4.2 Cat Heavy Lift Mode]\n### 4.2 Cat Heavy Lift Mode\n- Increases main hydraulic system pressure from 35,000 kPa to 38,000 kPa while reducing cylinder speed.\n- Gives the operator maximum breakout and crane capacity when lowering heavy fallen structural steel beams to the ground."
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "4.3 High-Reach Stability Monitoring System",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 4.3 High-Reach Stability Monitoring System]\n### 4.3 High-Reach Stability Monitoring System\n- Real-time sensors calculate the center of gravity and front tool payload weight.\n- Displays color-coded stability margins on the cab monitor and automatically restricts boom lowering if tipping thresholds are approached.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "5. Job Site Task Procedures & Operational Guidelines",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 5. Job Site Task Procedures & Operational Guidelines]\n## 5. Job Site Task Procedures & Operational Guidelines"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "Task 1: 2-Story Reinforced Concrete Warehouse Demolition (Windy Conditions)",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 Task 1: 2-Story Reinforced Concrete Warehouse Demolition (Windy Conditions)]\n### Task 1: 2-Story Reinforced Concrete Warehouse Demolition (Windy Conditions)\n- **Objective**: Dismantle industrial concrete warehouse frame using high-flow shear in 35 km/h wind gusts within 90 minutes.\n- **Optimal Configuration**:\n  - Power Mode: **Smart**\n  - Engine RPM: **1800 RPM**\n  - Joystick Response: **Medium**\n  - Attachment Flow: **High Flow**\n  - Tool Duty Cycle: **85%**\n  - Hydraulic Relief Protection: **ON**\n- **Operator Technique**: Cut from the top down, one structural bay at a time. In windy weather, do not lift heavy severed concrete blocks high in the air; shear them in place and let rubble fall into the exclusion zone. Keep duty cycle at 85% to protect the 6-year-old machine's hydraulic cooler."
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "Task 2: Heavy Concrete Foundation Pulverizing & Rebar Separation",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 Task 2: Heavy Concrete Foundation Pulverizing & Rebar Separation]\n### Task 2: Heavy Concrete Foundation Pulverizing & Rebar Separation\n- **Objective**: Process 600 tons of slab rubble on the ground to separate rebar from concrete.\n- **Optimal Configuration**:\n  - Power Mode: **Smart**\n  - Engine RPM: **1750 RPM**\n  - Joystick Response: **Medium**\n  - Attachment Flow: **Medium Flow**\n  - Tool Duty Cycle: **80%**\n- **Operator Technique**: Rest the pulverizer jaws on the slab, crush concrete along rebar seams, and pull clean steel out for scrap loading.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual",
+    "filename": "cat_349_demolition_manual.md",
+    "machine_id": "CAT-349",
+    "section": "6. Safety, Thermal Management & Environmental Protection",
+    "text": "[Caterpillar 349 High-Reach Demolition Excavator \u2014 Operator Training Manual \u2014 6. Safety, Thermal Management & Environmental Protection]\n## 6. Safety, Thermal Management & Environmental Protection\n- **Wind Gust Precautions**: High-reach demolition attachments possess large surface areas. Operations must cease if wind gusts exceed 45 km/h.\n- **Hydraulic Thermal Warning Response**: If the hydraulic temperature indicator reaches the red sector (>90\u00b0C), stop attachment hammering immediately. Idle engine at 1200 RPM for 3 minutes to allow the cooling fan to dissipate heat."
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "Overview",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 Overview]\n# Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "1. Machine Overview & Technical Specifications",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 1. Machine Overview & Technical Specifications]\n## 1. Machine Overview & Technical Specifications\nThe **CAT 420 Center-Pivot Backhoe Loader** is a versatile 8.5-ton utility machine featuring a front loader bucket and an excavator-style rear digging arm with hydraulic outrigger stabilizers.\n\n- **Machine Model**: CAT 420\n- **Category**: Trenching & Utility Excavation\n- **Engine**: Cat C3.6 DITA 4-Cylinder Turbocharged Diesel\n- **Net Flywheel Power**: 93 HP (69 kW)\n- **Operating Weight**: 8,500 kg (18,740 lbs)\n- **Backhoe Dig Depth**: 4.36 meters (standard stick), 5.46 meters (extendable stick)\n- **Hydraulic Pump Type**: Variable-displacement axial piston pump\n- **Pump Flow**: 160 L/min (42.3 gal/min)\n- **Standard Base Fuel Burn Rate**: 9.2 L/hr\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "2. Universal Cab Controls & Engine Tuning",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 2. Universal Cab Controls & Engine Tuning]\n## 2. Universal Cab Controls & Engine Tuning\nThe cab provides 360-degree visibility, a swiveling air-suspension seat, mechanical or pilot controls, and a proportional hand/foot throttle."
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "2.1 Power Modes",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 2.1 Power Modes]\n### 2.1 Power Modes\n1. **Eco Mode (Recommended for Trenching)**:\n   - Limits peak engine revs while maintaining hydraulic pump displacement.\n   - Saves up to 10% diesel fuel and prevents sudden wheel or stabilizer slips on wet, slick roadside ground.\n2. **Smart Mode**:\n   - Automatically adapts engine RPM and hydraulic output to current trench resistance.\n   - Recommended when switching frequently between front-end loading and rear backhoe digging.\n3. **Power Mode**:\n   - Provides unrestricted 2200 RPM throttle and peak hydraulic pressure.\n   - Used for hard caliche or frozen ground trenching, but causes severe tire spin if used carelessly in wet soil."
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "2.2 Engine Throttle RPM Dial",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 2.2 Engine Throttle RPM Dial]\n### 2.2 Engine Throttle RPM Dial\n- **Operating RPM Band**: 1200 to 2200 RPM.\n- **Factory Default**: 1650 RPM.\n- **Tuning Rule**: For continuous utility trenching, lock engine throttle at **1550 to 1650 RPM**. Revving above 1800 RPM while digging generates excessive heat and creates hydraulic chatter without increasing trench progress."
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "2.3 Joystick Speed / Hydraulic Response",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 2.3 Joystick Speed / Hydraulic Response]\n### 2.3 Joystick Speed / Hydraulic Response\n1. **Fine**: Essential for excavating around live gas mains, water pipes, and underground fiber optics.\n2. **Medium**: Standard digging profile for uniform pipeline and culvert trenches.\n3. **Quick**: High-speed cycle mode suited for bulk spoil re-handling with the front loader bucket.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "3. Machine-Specific Cab Signature Controls",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 3. Machine-Specific Cab Signature Controls]\n## 3. Machine-Specific Cab Signature Controls"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "3.1 Bucket Target Fill Level (`payload_target_pct`)",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 3.1 Bucket Target Fill Level (`payload_target_pct`)]\n### 3.1 Bucket Target Fill Level (`payload_target_pct`)\n- **Tuning Range**: 50% to 105% (Default: 80%).\n- **Trenching Consideration**: Deep narrow trench buckets (450mm\u2013600mm) must not be overloaded. A fill target of **75%\u201385%** ensures clean material discharge and prevents back-spill into the newly dug trench."
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "3.2 Stabilizer Down-Pressure (`stabilizer_stance`)",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 3.2 Stabilizer Down-Pressure (`stabilizer_stance`)]\n### 3.2 Stabilizer Down-Pressure (`stabilizer_stance`)\nRear hydraulic outriggers anchor the machine and lift the rear tires slightly off the ground to establish a stable digging platform:\n1. **Soft Mud (Wide Pad Stance)**:\n   - Deploys stabilizers with wide-angle pad contact and reduced down-pressure.\n   - Crucial during rainy conditions or on saturated roadside berms to prevent the stabilizer feet from sinking or punching into the mud.\n   - Prevents machine tipping and cab misalignment during deep trenching.\n2. **Standard (Firm Dirt)**:\n   - Sets standard vertical down-pressure on dry soil, gravel roads, or firm clay.\n   - Provides firm footing for utility installation.\n3. **Locked Down (Deep Trenching)**:\n   - Maximum hydraulic cylinder lock-out down-pressure.\n   - Elevates rear tires 50mm clear of the grade to resist heavy backhoe crowd forces in hard shale or dry rock.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "4. Integrated Caterpillar Smart Technology",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 4. Integrated Caterpillar Smart Technology]\n## 4. Integrated Caterpillar Smart Technology"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "4.1 Cat Differential Lock",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 4.1 Cat Differential Lock]\n### 4.1 Cat Differential Lock\n- Foot pedal or pushbutton actuated mechanical rear axle differential lock.\n- Locks both rear drive wheels together to prevent wheel spin when repositioning along slippery, muddy trench banks."
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "4.2 Cat Boom Float",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 4.2 Cat Boom Float]\n### 4.2 Cat Boom Float\n- Allows the front loader bucket or backhoe boom to float freely across ground contours under its own weight.\n- Ideal for backfilling trenches and cleaning the job site without gouging the existing roadway."
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "4.3 Return-to-Dig & Return-to-Trench",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 4.3 Return-to-Dig & Return-to-Trench]\n### 4.3 Return-to-Dig & Return-to-Trench\n- Automatically repositions the digging attachment to the preset trenching angle with a single touch, reducing operator fatigue during long pipeline installations.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "5. Job Site Task Procedures & Operational Guidelines",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 5. Job Site Task Procedures & Operational Guidelines]\n## 5. Job Site Task Procedures & Operational Guidelines"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "Task 1: Roadside Utility Conduit Trenching (Wet Mud Conditions)",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 Task 1: Roadside Utility Conduit Trenching (Wet Mud Conditions)]\n### Task 1: Roadside Utility Conduit Trenching (Wet Mud Conditions)\n- **Objective**: Dig an 80-meter continuous conduit trench (depth: 1.5m, width: 0.6m) along a roadside embankment during steady rain.\n- **Optimal Configuration**:\n  - Power Mode: **Eco**\n  - Engine RPM: **1650 RPM**\n  - Joystick Response: **Fine**\n  - Bucket Fill: **80%**\n  - Stabilizer Stance: **Soft Mud**\n  - Differential Lock: **ON**\n- **Operator Technique**: Plant the front loader bucket flat on the grade for forward anchorage. Set stabilizers to Soft Mud to avoid sinkholes. Keep throttle at 1650 RPM to avoid hydraulic surges that break trench sidewalls."
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "Task 2: High-Speed Irrigation Ditch Excavation in Dry Sand",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 Task 2: High-Speed Irrigation Ditch Excavation in Dry Sand]\n### Task 2: High-Speed Irrigation Ditch Excavation in Dry Sand\n- **Objective**: Trench 120 meters of irrigation feeder ditch in firm dry loam.\n- **Optimal Configuration**:\n  - Power Mode: **Eco**\n  - Engine RPM: **1550 RPM**\n  - Joystick Response: **Medium**\n  - Bucket Fill: **85%**\n  - Stabilizer Stance: **Standard**\n- **Operator Technique**: Use smooth curl-and-crowd technique. Dump spoil at least 1 meter away from the trench crest to prevent overburden sloughing back in.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual",
+    "filename": "cat_420_backhoe_manual.md",
+    "machine_id": "CAT-420",
+    "section": "6. Safety, Thermal Management & Stability Tips",
+    "text": "[Caterpillar 420 Center-Pivot Backhoe Loader \u2014 Operator Training Manual \u2014 6. Safety, Thermal Management & Stability Tips]\n## 6. Safety, Thermal Management & Stability Tips\n- **Tipping & Sinking Hazard**: Never swing a loaded backhoe bucket over the downhill side on an embankment without both stabilizers firmly planted.\n- **Sidewall Cave-in Prevention**: In wet ground, avoid running the machine too close to the trench edge. Reposition machine frequently in 1.5-meter increments using the backhoe arm crowd assist.\n- **Fuel Efficiency Tip**: The Cat C3.6 engine develops peak torque at just 1400\u20131600 RPM. There is zero productivity benefit in running the throttle wide open."
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "Overview",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 Overview]\n# Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "1. Machine Overview & Technical Specifications",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 1. Machine Overview & Technical Specifications]\n## 1. Machine Overview & Technical Specifications\nThe **CAT 950M Medium Wheel Loader** is a 19.2-ton production workhorse engineered for aggregate handling, quarry truck loading, railcar filling, and bulk material transport.\n\n- **Machine Model**: CAT 950M\n- **Category**: Material Loading\n- **Engine**: Cat C7.1 ACERT Tier 4 Final Diesel\n- **Net Flywheel Power**: 250 HP (186 kW)\n- **Operating Weight**: 19,213 kg (42,357 lbs)\n- **Standard Bucket Capacity**: 3.1 to 3.6 m\u00b3 (4.0 to 4.75 yd\u00b3)\n- **Breakout Force**: 181 kN (40,690 lbf)\n- **Transmission**: 4-Speed Countershaft Powershift with Lock-Up Clutch\n- **Standard Base Fuel Burn Rate**: 18.0 L/hr\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "2. Universal Cab Controls & Engine Tuning",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 2. Universal Cab Controls & Engine Tuning]\n## 2. Universal Cab Controls & Engine Tuning\nThe pressurized sound-suppressed cab features electro-hydraulic seat-mounted joystick steering, a responsive powershift lever, and an integrated color touchscreen."
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "2.1 Power Modes",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 2.1 Power Modes]\n### 2.1 Power Modes\n1. **Eco Mode**:\n   - Reduces torque converter slip and trims maximum engine revs.\n   - Ideal for light stockpile maintenance, clean-up work, and long flat load-and-carry runs.\n2. **Smart Mode (Standard Recommended)**:\n   - Modulates hydraulic displacement and engine speed dynamically.\n   - Provides peak hydraulic flow and torque converter rimpull when penetrating the pile, and drops RPM during transit.\n   - Delivers the fastest V-pattern truck loading cycle times with lowest fuel consumption.\n3. **Power Mode**:\n   - Maintains continuous high hydraulic pressure and maximum engine RPM.\n   - Useful for heavy quarry shot-rock and steep grade climbs, but risks severe tire spin if tire anti-slip is not properly set."
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "2.2 Engine Throttle RPM Dial",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 2.2 Engine Throttle RPM Dial]\n### 2.2 Engine Throttle RPM Dial\n- **Operating RPM Band**: 1300 to 2100 RPM.\n- **Factory Default**: 1700 RPM.\n- **Tuning Rule**: Lock throttle between **1700 and 1800 RPM** in Smart Mode for high-production truck loading. Revving above 1900 RPM against the pile causes torque converter overheating and tire slipping."
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "2.3 Joystick Speed / Hydraulic Response",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 2.3 Joystick Speed / Hydraulic Response]\n### 2.3 Joystick Speed / Hydraulic Response\n1. **Fine**: Smooth, cushioned bucket tilt and lift; prevents aggregate spillage when loading fragile or narrow haul truck bodies.\n2. **Medium**: Balanced response for standard stockpile loading.\n3. **Quick**: Fast lift and dump valve actuation for high-speed quarry cycles.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "3. Machine-Specific Cab Signature Controls",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 3. Machine-Specific Cab Signature Controls]\n## 3. Machine-Specific Cab Signature Controls"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "3.1 Bucket Target Load (`payload_target_pct`)",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 3.1 Bucket Target Load (`payload_target_pct`)]\n### 3.1 Bucket Target Load (`payload_target_pct`)\n- **Tuning Range**: 50% to 110% (Default: 90%).\n- **Underfilling (<75%)**: Demands 5 or 6 passes to fill a 25-ton truck instead of 3 or 4, drastically increasing turnaround time.\n- **Optimal Target (90%\u201395%)**: Fills the bucket heel cleanly, centers mass on the front axle, and prevents material rollover onto the lift arm cylinders."
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "3.2 Rimpull Anti-Slip Control (`rimpull_control`)",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 3.2 Rimpull Anti-Slip Control (`rimpull_control`)]\n### 3.2 Rimpull Anti-Slip Control (`rimpull_control`)\nRimpull control manages the maximum torque sent to the heavy loader tires when penetrating a material stockpile:\n1. **60% Mud (Wet & Slippery)**:\n   - Reduces torque output to the wheels to 60%.\n   - Prevents tire spin on wet clay, mud, or unpaved quarry distribution floors during rain.\n   - Saves expensive loader tires from cutting and shredding.\n2. **80% Gravel (Loose Stone & Aggregate)**:\n   - Sets torque to 80%.\n   - Optimal setting for crushed rock, 20mm gravel, and sand stockpiles.\n   - Allows steady pile penetration without breaking tire traction.\n3. **100% Max (Dry Pavement & Concrete)**:\n   - Full 100% engine torque delivered to the wheels.\n   - Only to be used on clean, dry concrete aprons or hard dry quarry rock where tire slip cannot occur.\n   - Warning: Using 100% rimpull in mud will spin tires into the ground, burying the axle and burning diesel.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "4. Integrated Caterpillar Smart Technology",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 4. Integrated Caterpillar Smart Technology]\n## 4. Integrated Caterpillar Smart Technology"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "4.1 Cat Auto-Dig",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 4.1 Cat Auto-Dig]\n### 4.1 Cat Auto-Dig\n- Automates the bucket loading process: as the loader approaches the pile, sensors detect resistance and automatically trigger the optimum lift and tilt sequence to fill the bucket completely on the first pass.\n- Eliminates operator fatigue and standardizes loading consistency."
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "4.2 Cat Production Measurement (Payload Assist)",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 4.2 Cat Production Measurement (Payload Assist)]\n### 4.2 Cat Production Measurement (Payload Assist)\n- Weighs material on the fly as the bucket lifts past the boom sensor.\n- Displays target truck payload on the cab screen, ensuring legal payload without under- or over-loading."
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "4.3 Ride Control System",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 4.3 Ride Control System]\n### 4.3 Ride Control System\n- Hydraulic accumulator dampens boom bounce during loaded travel.\n- Prevents aggregate spillage during high-speed load-and-carry transport across rough site terrain.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "5. Job Site Task Procedures & Operational Guidelines",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 5. Job Site Task Procedures & Operational Guidelines]\n## 5. Job Site Task Procedures & Operational Guidelines"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "Task 1: 12-Truck Commercial Aggregate Loading (Quarry Limestone)",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 Task 1: 12-Truck Commercial Aggregate Loading (Quarry Limestone)]\n### Task 1: 12-Truck Commercial Aggregate Loading (Quarry Limestone)\n- **Objective**: Rapidly load twelve 25-ton highway haul trucks with crushed 20mm limestone within 42 minutes.\n- **Optimal Configuration**:\n  - Power Mode: **Smart**\n  - Engine RPM: **1750 RPM**\n  - Joystick Response: **Quick**\n  - Bucket Fill: **90%\u201395%**\n  - Rimpull Control: **80% Gravel**\n  - Cat Auto-Dig: **ON**\n- **Operator Technique**: Execute tight 45-degree V-pattern loading cycles. Approach the pile perpendicular in 1st gear. Crowd into the toe of the pile, initiate smooth lift and tilt back, reverse, and spot into the truck body in a continuous fluid rhythm."
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "Task 2: Wet Yard Sand Stockpiling in Heavy Rain",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 Task 2: Wet Yard Sand Stockpiling in Heavy Rain]\n### Task 2: Wet Yard Sand Stockpiling in Heavy Rain\n- **Objective**: Move and load saturated river sand into rail hoppers during rainfall.\n- **Optimal Configuration**:\n  - Power Mode: **Eco**\n  - Engine RPM: **1650 RPM**\n  - Joystick Response: **Medium**\n  - Bucket Fill: **85%**\n  - Rimpull Control: **60% Mud**\n- **Operator Technique**: Set Rimpull to 60% immediately. Saturated sand is dense; lower bucket fill to 85% to avoid tipping when swinging with the boom elevated.\n\n---"
+  },
+  {
+    "doc_title": "Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual",
+    "filename": "cat_950M_wheel_loader_manual.md",
+    "machine_id": "CAT-950M",
+    "section": "6. Safety, Thermal Management & Tire Care",
+    "text": "[Caterpillar 950M Medium Wheel Loader \u2014 Operator Training Manual \u2014 6. Safety, Thermal Management & Tire Care]\n## 6. Safety, Thermal Management & Tire Care\n- **Tire Shredding Hazard**: Tires represent one of the highest operating costs on wheel loaders. Spinning tires under heavy torque while digging cuts the tread against sharp rock in seconds. Always back off throttle if wheels slip.\n- **Torque Converter Overheating**: Pushing against a pile at high RPM in stalled condition causes torque converter fluid to overheat rapidly. Engage Auto-Dig or modulate throttle smoothly."
+  }
+]

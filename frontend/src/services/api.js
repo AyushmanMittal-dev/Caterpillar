@@ -34,3 +34,22 @@ export async function fetchOptimalSolution(taskId) {
   if (!res.ok) throw new Error('Failed to fetch optimal solution');
   return res.json();
 }
+
+export async function sendChatMessage(payload) {
+  const res = await fetch(`${API_BASE}/chat`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.detail || 'Chat query failed');
+  }
+  return res.json();
+}
+
+export async function fetchChatStatus() {
+  const res = await fetch(`${API_BASE}/chat/status`);
+  if (!res.ok) return { ollama_online: false, status: 'offline' };
+  return res.json();
+}

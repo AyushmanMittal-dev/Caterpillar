@@ -15,14 +15,22 @@ if PARENT_DIR not in sys.path:
     sys.path.insert(0, PARENT_DIR)
 
 from backend.routes.simulation import router as simulation_router
+from backend.routes.chat import router as chat_router
 from backend.services.ml_engine import ml_engine
+from backend.services.rag_service import rag_service
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup: ensure ML models are loaded
+    # Startup: ensure ML models and RAG index are loaded
     if not ml_engine.is_loaded:
         print("Loading ML models during startup...")
         ml_engine.load()
+    if not rag_service.is_initialized:
+        try:
+            print("Loading RAG FAISS index during startup...")
+            rag_service.build_index()
+        except Exception as e:
+            print(f"Warning: RAG service index initialization deferred: {e}")
     yield
     # Shutdown logic if any
     print("Shutting down CAT Simulator backend...")
@@ -32,6 +40,11 @@ try:
     ml_engine.load()
 except Exception as e:
     print(f"Warning: Deferred ML engine load: {e}")
+
+try:
+    rag_service.build_index()
+except Exception as e:
+    print(f"Warning: Deferred RAG index load: {e}")
 
 app = FastAPI(
     title="Caterpillar Intelligent Operator Assistant API",
@@ -50,6 +63,7 @@ app.add_middleware(
 )
 
 app.include_router(simulation_router)
+app.include_router(chat_router)
 
 @app.get("/api/health")
 def health_check():
@@ -57,6 +71,8 @@ def health_check():
         "status": "healthy",
         "service": "CAT Machine Operator Simulation Module",
         "ml_engine_loaded": ml_engine.is_loaded,
+        "rag_engine_loaded": rag_service.is_initialized,
+        "ollama_available": rag_service.is_ollama_available(),
         "metrics": ml_engine.metrics
     }
 

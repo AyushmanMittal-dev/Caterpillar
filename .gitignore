@@ -1,5 +1,5 @@
 # ==============================================================================
-# Caterpillar Simulation Module - Git Ignore
+# Caterpillar Operator Simulation Module — Git Ignore
 # ==============================================================================
 
 # --- Python Virtual Environments ---
@@ -10,15 +10,17 @@ env/
 backend/.venv/
 */.venv/
 
-# --- Python Bytecode & Cache ---
+# --- Python Bytecode, Caches & Compiles ---
 __pycache__/
 */__pycache__/
 */**/__pycache__/
 *.py[cod]
 *$py.class
 *.pyc
+*.pyd
+*.pyo
 
-# --- Testing & Code Coverage ---
+# --- Testing, Profiling & Coverage ---
 .pytest_cache/
 .coverage
 .coverage.*
@@ -35,9 +37,23 @@ frontend/node_modules/
 frontend/dist/
 dist/
 dist-ssr/
+.vite/
+frontend/.vite/
 *.local
 
-# --- Logs & Debugging ---
+# --- Vector Store & Ephemeral RAG Index ---
+# Binary FAISS indices are auto-built by rag_service.py on startup
+*.faiss
+*.index
+
+# --- Machine Learning Temporary Artifacts & Checkpoints ---
+*.checkpoint
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# --- Logs, Telemetry & Debugging ---
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -53,6 +69,7 @@ lerna-debug.log*
 .env.production.local
 *.pem
 *.key
+*.cert
 
 # --- IDE & Editor Configuration ---
 .idea/
@@ -63,9 +80,11 @@ lerna-debug.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.swp
-*.swo
 *~
+
+# --- Jupyter Notebook Caches ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
 
 # --- OS Generated Files ---
 .DS_Store
@@ -76,9 +95,12 @@ lerna-debug.log*
 ehthumbs.db
 Thumbs.db
 [Dd]esktop.ini
+$RECYCLE.BIN/
 
-# --- Temporary & Scratch Files ---
-tmp/
-temp/
-*.tmp
-*.bak
+# --- Essential Project Data Whitelist (Always Track) ---
+!backend/data/cat_machines.json
+!backend/data/tasks_catalog.json
+!backend/data/simulation_dataset.csv
+!backend/data/training_manuals/
+!backend/data/training_manuals/*.md
+!backend/models/cat_simulator_models.joblib
