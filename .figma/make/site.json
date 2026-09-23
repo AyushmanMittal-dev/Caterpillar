@@ -1,0 +1,10 @@
+{
+  "description": "Offers a simple, user-friendly interface with light yellow and black theme, enabling even first-time users to easily navigate and interact with the app.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

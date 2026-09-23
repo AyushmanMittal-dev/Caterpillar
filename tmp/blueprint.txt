@@ -1,0 +1,305 @@
+exists True size 42685
+CAT OPERATOR SIMULATION MODULE
+Frontend-Only UI & Simulation Experience Blueprint
+React + Framer Motion • Minimal Hackathon Interface • 23 September 2026
+1. Purpose
+This document contains only the frontend requirements for the operator simulation module. It defines what the operator sees, the screen flow, UI components, frontend state, interactions, animations and the visual behavior of the simulation. Backend, ML training, dataset generation and API implementation details are intentionally excluded.
+2. Dataset Context Used by the Frontend
+The frontend must remain compatible with the project datasets already decided: a 1,000,000-row large dataset and a 150,000-row compact dataset using the same finalized feature schema. The UI does not expose every dataset column as a control. Instead, it presents only the parameters relevant to the selected task and machine.
+MVP task
+Representative machine
+Frontend simulation focus
+Excavation
+CAT 320
+Cycles, bucket/swing parameters, load, speed, environment
+Loading
+CAT 950
+Loading cycles, travel, bucket utilization, load
+Grading
+CAT 140
+Speed, ground condition, grading conditions, stability
+3. Basic Frontend Diagram
+The complete frontend experience should follow this simple flow:
+[ TASK SELECT ]       ↓[ MACHINE SELECT ]       ↓[ PARAMETER SETUP ]       ↓[ MACHINE SIMULATION ]       ↓[ RESULT + FEEDBACK ]       ↺    TRY AGAIN
+Inside the simulation screen, the main interaction is: operator changes parameters → starts run → machine state/progress changes → estimated completion time updates → result is shown → operator retries.
+4. Frontend Screen Flow
+Screen
+Purpose
+Main action
+1. Task Selection
+Choose training task
+Start task
+2. Machine Selection
+Choose compatible machine
+Continue
+3. Parameter Setup
+Tune task/machine/environment inputs
+Run simulation
+4. Simulation
+Observe machine state and task progress
+Pause / finish
+5. Results
+Understand performance and retry
+Try again
+5. Screen 1 — Task Selection
+Keep this screen extremely simple.
+TASK LIBRARY[ Excavation ]     [ Loading ]     [ Grading ]   Target time       Target time       Target time   Start →            Start →            Start →
+Component
+Frontend behavior
+TaskCard
+Shows task name, short description, target and Start action
+Task category
+Visually identifies excavation/loading/grading
+Start button
+Moves to machine selection
+Task status
+Optional: New / In Progress / Completed
+6. Screen 2 — Machine Selection
+TASK: EXCAVATIONSELECT MACHINE[ CAT 320 ]Type: ExcavatorAge: 6 years[ SELECT ][ Other compatible machines ... ]
+For the MVP, show the representative machine for each category prominently. The UI should still be designed as a reusable machine selector so additional CAT models can be added later.
+7. Screen 3 — Parameter Setup
+This is the most important configuration screen. It should feel like setting up a machine, not filling out a long web form.
+Group
+Example frontend controls
+Machine
+Engine RPM, machine speed, engine load, relevant operating controls
+Task
+Number of cycles, task quantity, task-specific operating values
+Environment
+Temperature, rainfall, weather, ground condition
+Safety
+Seatbelt state, object distance/proximity where applicable
+Use sliders for continuous parameters, segmented controls/dropdowns for categories, and clear units beside every value. Show a small recommended-range marker where useful.
+8. Parameter Control Component
+ENGINE RPM1200 ────────●──────── 2200             1800 RPMRecommended range: 1600–2000
+The reusable ParameterControl should support label, unit, value, minimum, maximum, step, default, recommended range and warning state. The component should visually distinguish normal, warning and invalid values without becoming visually heavy.
+9. Environment Controls
+Environmental conditions should be grouped separately so the operator understands that they affect the machine/task context.
+Control
+Example
+Temperature
+34 °C
+Rainfall
+None / Light / Moderate / Heavy
+Weather
+Clear / Cloudy / Rain
+Ground condition
+Dry / Wet / Muddy / Uneven
+Terrain
+Relevant task-specific terrain control
+If a selected combination produces a frontend warning, show the warning immediately near the affected control rather than hiding it until the result screen.
+10. Screen 4 — Machine Simulation
+This is the core screen. It should resemble a simplified machine monitor. Avoid a full 3D machine simulation for the MVP.
+┌─────────────────────────────────────────────┐│ CAT 320                    SIMULATION       │├─────────────────────────────────────────────┤│                                             ││              MACHINE VIEW                   ││                 [ 🚜 ]                     ││                                             │├─────────────────────────────────────────────┤│ ENGINE LOAD   SPEED       TEMP       FUEL   ││   72%        4.1 km/h     89°C      14.2   │├─────────────────────────────────────────────┤│ TASK PROGRESS                               ││ ███████████████░░░░░░░  62%                ││                                             ││ Estimated: 08:42     Target: 08:00         ││                                             ││             [ PAUSE ]                       │└─────────────────────────────────────────────┘
+11. Simulation Screen Components
+Component
+What it shows
+MachineHeader
+Selected CAT model, task and simulation status
+MachineVisual
+Simple 2D/illustrative machine representation or state icon
+MachineTelemetry
+Engine load, speed, fuel rate, engine temperature and relevant state
+ProgressBar
+Task completion percentage
+SimulationTimer
+Elapsed time / estimated completion / remaining time
+WarningPanel
+Safety or environmental warnings
+PauseButton
+Pause/resume simulation
+12. Machine Visual
+The machine visual should be a lightweight 2D representation or static machine silhouette with simple state changes. It does not need to be a 3D model. Visual state can communicate Running, Idle, Warning and Complete.
+State
+Visual behavior
+Idle
+Static machine with neutral status
+Running
+Subtle motion/pulse and active telemetry
+Warning
+Highlighted warning state and visible message
+Complete
+Completion state and transition to result
+13. Framer Motion Usage
+Use animation only where it helps the operator understand changing state.
+Animation
+Use
+Progress bar
+Smoothly animate simulation progress
+Telemetry
+Smooth numeric transitions where appropriate
+Parameter change
+Small transition when a value/state changes
+Warnings
+Slide/fade in warning message
+Simulation start
+Short transition from configuration to active simulation
+Result
+Reveal result metrics after completion
+Avoid animated backgrounds, large page transitions, decorative effects and heavy 3D animation.
+14. Screen 5 — Results
+SIMULATION COMPLETETARGET TIME        08:00YOUR ESTIMATE      08:37DIFFERENCE         +00:37EFFICIENCY         82%SAFETY             No critical violationsPARAMETERS✓ Engine RPM       Good✓ Hydraulic/load   Good⚠ Swing angle      AdjustWHY?Swing angle increased the estimated cycle time.[ TRY AGAIN ]
+15. Feedback UI
+Feedback should be concise and actionable. The operator should immediately understand what to change on the next attempt.
+Feedback type
+Example
+Good
+Parameter is within the recommended operating range.
+Warning
+This setting may increase task time under the current conditions.
+Safety
+Potential safety issue detected. Review the highlighted setting.
+Learning
+Reducing swing angle may reduce the simulated cycle time.
+16. Retry Loop
+The frontend should make retrying effortless:
+RESULT → TRY AGAIN → CONFIGURATION → RUN → SIMULATION → RESULT
+When Try Again is selected, preserve the previous parameter values and allow the operator to modify only what they want. This makes the learning loop visible.
+17. Frontend State
+A single simulation state can be maintained through React Context or a custom useSimulation hook.
+State
+Purpose
+task
+Selected task
+machine
+Selected machine
+parameters
+Current machine/task settings
+environment
+Current environmental settings
+prediction
+Latest estimated completion result
+machineState
+Current simulated telemetry/state
+progress
+Current task progress
+warnings
+Active warnings
+simulationStatus
+idle / configuring / running / paused / complete
+18. React Component Structure
+src/
+components/
+TaskCard.jsx
+MachineCard.jsx
+ParameterControl.jsx
+ParameterGroup.jsx
+EnvironmentPanel.jsx
+MachineVisual.jsx
+MachineStatePanel.jsx
+MachineTelemetry.jsx
+SimulationProgress.jsx
+SimulationTimer.jsx
+WarningPanel.jsx
+ResultCard.jsx
+RecommendationPanel.jsx
+pages/
+Home.jsx
+MachineSelection.jsx
+Configuration.jsx
+Simulation.jsx
+Results.jsx
+hooks/
+useSimulation.js
+services/
+api.js
+App.jsx
+19. Frontend Design Principles
+Principle
+Implementation
+Minimal
+Simple cards, panels, controls and readable telemetry
+Operator-first
+Important state visible without navigating away
+Machine-like
+Use labels, units, states and telemetry familiar to a machine interface
+Actionable
+Warnings and feedback appear next to the relevant parameter
+Responsive
+Configuration and simulation should work on laptop/tablet screens
+Low visual noise
+No unnecessary charts or decorative dashboard widgets
+Fast interaction
+Changing a slider should immediately update the displayed value
+20. Frontend Features for MVP
+Priority
+Feature
+P0
+Task selection
+P0
+Machine selection
+P0
+Dynamic parameter controls
+P0
+Environment controls
+P0
+Simulation screen
+P0
+Live progress and timer
+P0
+Machine telemetry display
+P0
+Warnings/status display
+P0
+Results screen
+P0
+Try Again flow
+P1
+Simulation score
+P1
+Parameter comparison between attempts
+P1
+Feature/reason explanation panel
+P2
+Operator history
+P2
+Badges/advanced gamification
+21. Explicitly Out of Scope for Frontend MVP
+Full 3D excavator/loader rendering
+VR/AR interface
+Complex game physics
+Large analytics dashboards
+Admin dashboard
+Model training UI
+Dataset management UI
+Online learning interface
+User management/authentication unless required by the final demo
+22. Frontend Test Cases
+ID
+Scenario
+Expected UI behavior
+FE-01
+Select Excavation
+Moves to machine selection
+FE-02
+Select CAT 320
+Loads excavation configuration
+FE-03
+Move parameter slider
+Value updates immediately
+FE-04
+Invalid parameter
+Inline warning appears
+FE-05
+Start simulation
+Configuration transitions to simulation
+FE-06
+Simulation running
+Progress and telemetry visibly update
+FE-07
+Warning event
+Warning panel appears without hiding core telemetry
+FE-08
+Simulation complete
+Results screen appears
+FE-09
+Try Again
+Previous values are preserved for editing
+FE-10
+Change parameter and rerun
+New result is displayed
+23. Final Frontend Experience
+The frontend should feel like a lightweight digital machine console with a training-game loop. The operator chooses a task, chooses a machine, adjusts a manageable set of controls, starts the simulation, watches the machine state change, receives an estimated completion result, understands what affected the result, and retries. The UI should make this loop obvious within seconds.
+24. One-Screen Mental Model
+SELECT → TUNE → RUN → WATCH → LEARN → RETRY
+End of Frontend Blueprint
