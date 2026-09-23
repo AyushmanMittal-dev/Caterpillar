@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #151513;
+  background: #f7f7f3;
+  font-synthesis: none;
+  --yellow: #ffcb05;
+  --yellow-soft: #fff4b8;
+  --ink: #151513;
+  --muted: #6d6d66;
+  --line: #deded6;
+  --paper: #fff;
+  --green: #2d7a4f;
+  --amber: #c79200;
+  --amber-soft: #fff4d8;
+  --red-soft: #fde8e8;
+  --red: #d32f2f;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 90% 4%, rgba(255, 203, 5, 0.12), transparent 24rem),
+    #f7f7f3;
+  color: #151513;
+}
+
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(255, 203, 5, 0.5);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d7d7cf; border-radius: 99px; }
+
+/* Caterpillar Vector Drawing Utilities */
+.ground-line { stroke: #d6d6cf; stroke-width: 3; stroke-linecap: round; }
+.yellow-fill, .bucket { fill: var(--yellow); stroke: var(--ink); stroke-width: 3; stroke-linejoin: round; }
+.dark-fill { fill: #252522; stroke: var(--ink); stroke-width: 3; }
+.window-fill { fill: #d9ebe9; stroke: var(--ink); stroke-width: 3; }
+.track-fill, .tyre { fill: #292927; stroke: var(--ink); stroke-width: 3; }
+.track-wheel, .hub { fill: #c9c9c0; stroke: var(--ink); stroke-width: 3; }
+.boom { fill: none; stroke: var(--yellow); stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }

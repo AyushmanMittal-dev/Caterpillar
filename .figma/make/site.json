@@ -1,0 +1,10 @@
+{
+  "description": "Offers a simple, user-friendly interface with interactive elements and a light yellow-black theme, designed for easy use by non-technical first-time users.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
