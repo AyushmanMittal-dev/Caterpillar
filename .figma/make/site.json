@@ -1,0 +1,10 @@
+{
+  "description": "This user-friendly web application features a minimalist design with an interactive interface, making it easy for users to access essential functionalities effortlessly.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
