@@ -118,7 +118,75 @@ export default function ParameterControls({
         </div>
       </div>
 
-      {/* 4 & 5. Dynamic Machine-Specific Signature Controls */}
+      {/* 4. Environmental & Operating Features: Weather, Ground Condition, Planned Time */}
+      <div style={{ padding: '10px', backgroundColor: '#0D1117', borderRadius: '6px', border: '1px solid var(--panel-border)', marginBottom: '16px' }}>
+        <div style={{ fontSize: '11px', fontWeight: '800', color: 'var(--cat-yellow)', textTransform: 'uppercase', marginBottom: '8px' }}>
+          Site & Environmental Factors
+        </div>
+
+        {/* Weather Selector */}
+        <div style={{ marginBottom: '10px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '4px' }}>
+            <span>Weather Condition</span>
+            <span style={{ color: '#fff', fontWeight: '600' }}>{parameters.weather || 'Sunny'}</span>
+          </div>
+          <div className="btn-group-3" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+            {['Sunny', 'Cloudy', 'Rainy', 'Windy'].map((w) => (
+              <button
+                key={w}
+                type="button"
+                className={`opt-btn ${ (parameters.weather || 'Sunny') === w ? 'active' : ''}`}
+                onClick={() => onChange({ ...parameters, weather: w })}
+                style={{ padding: '4px 6px', fontSize: '11px' }}
+              >
+                {w}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Ground Condition Selector */}
+        <div style={{ marginBottom: '10px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '4px' }}>
+            <span>Ground Condition / Soil</span>
+            <span style={{ color: '#fff', fontWeight: '600' }}>{parameters.ground_condition || 'Dry'}</span>
+          </div>
+          <div className="btn-group-3">
+            {['Dry', 'Wet', 'Muddy'].map((g) => (
+              <button
+                key={g}
+                type="button"
+                className={`opt-btn ${ (parameters.ground_condition || 'Dry') === g ? 'active' : ''}`}
+                onClick={() => onChange({ ...parameters, ground_condition: g })}
+                style={{ padding: '4px 6px', fontSize: '11px' }}
+              >
+                {g}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Planned Time Target */}
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '4px' }}>
+            <span>Planned Duration</span>
+            <span style={{ color: 'var(--cat-yellow)', fontFamily: 'monospace', fontWeight: '700' }}>
+              {parameters.planned_time_min || 60} min
+            </span>
+          </div>
+          <input
+            type="range"
+            min={15}
+            max={180}
+            step={5}
+            value={parameters.planned_time_min || 60}
+            onChange={(e) => onChange({ ...parameters, planned_time_min: parseFloat(e.target.value) })}
+            className="cab-slider"
+          />
+        </div>
+      </div>
+
+      {/* 5 & 6. Dynamic Machine-Specific Signature Controls */}
       {machine?.cab_controls?.map((ctrl) => {
         if (ctrl.type === 'slider') {
           const val = parameters[ctrl.id] !== undefined ? parameters[ctrl.id] : ctrl.default;

@@ -156,10 +156,8 @@ class CatRAGService:
             except Exception as e:
                 print(f"Failed to load cached index, rebuilding: {e}")
 
-        print("Building new FAISS vector index from Caterpillar training manuals...")
-        chunks = self.load_and_chunk_manuals()
-        if not chunks:
-            print("Warning: No manual chunks found to index.")
+        if not self.is_ollama_available():
+            print("Notice: Ollama is offline. RAG vector indexing skipped (ML Simulation Engine & Safety Telemetry run independently).")
             return
 
         embeddings = []
@@ -173,7 +171,8 @@ class CatRAGService:
                 print(f"Error embedding chunk {idx}: {e}")
 
         if not embeddings:
-            raise RuntimeError("No embeddings were generated. Ensure Ollama is running.")
+            print("Warning: Ollama embedding server is offline. Vector index creation skipped until Ollama is started.")
+            return
 
         matrix = np.vstack(embeddings).astype(np.float32)
         # Using IndexFlatIP on L2-normalized vectors yields exact Cosine Similarity

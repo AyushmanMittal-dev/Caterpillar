@@ -16,6 +16,7 @@ if PARENT_DIR not in sys.path:
 
 from backend.routes.simulation import router as simulation_router
 from backend.routes.chat import router as chat_router
+from backend.routes.engine import router as engine_router
 from backend.services.ml_engine import ml_engine
 from backend.services.rag_service import rag_service
 
@@ -64,6 +65,7 @@ app.add_middleware(
 
 app.include_router(simulation_router)
 app.include_router(chat_router)
+app.include_router(engine_router)
 
 @app.get("/api/health")
 def health_check():

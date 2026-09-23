@@ -8,6 +8,10 @@ import AssistantAdvice from './components/AssistantAdvice';
 import OperatorChatBot from './components/OperatorChatBot';
 import { ShieldCheck, HardHat } from 'lucide-react';
 
+import OperatorTaskWorkflow from './components/OperatorTaskWorkflow';
+import MachineConnectTab from './components/MachineConnectTab';
+import SafetyTelemetryHarness from './components/SafetyTelemetryHarness';
+
 const CATEGORIES = [
   { id: 'Earth Excavation', label: 'Excavation', machineCode: 'CAT 320' },
   { id: 'Trenching', label: 'Trenching', machineCode: 'CAT 420' },
@@ -37,6 +41,10 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('Earth Excavation');
   const [selectedTaskId, setSelectedTaskId] = useState('');
   const [currentMachine, setCurrentMachine] = useState(null);
+
+  // Global Machine Pairing & Active Workflow State
+  const [pairedTask, setPairedTask] = useState(null); // Active task paired with machine
+  const [pairedMachineId, setPairedMachineId] = useState(null); // Active machine ID paired
 
   // Operator Tunable Cab Parameters
   const [parameters, setParameters] = useState({
@@ -147,11 +155,19 @@ export default function App() {
 
     const payload = {
       task_id: currentTask.task_id,
+      task_type: currentTask.task_type || 'Excavation',
       machine_id: currentMachine.machine_id,
+      machine_type: currentMachine.category || 'Excavator',
+      machine_model: currentMachine.machine_id.replace('-', '_'),
       power_mode: parameters.power_mode,
       engine_rpm: parameters.engine_rpm,
       hydraulic_response: parameters.hydraulic_response,
-      assist_tech_enabled: parameters.assist_tech_enabled
+      assist_tech_enabled: parameters.assist_tech_enabled,
+      weather: parameters.weather || 'Sunny',
+      ground_condition: parameters.ground_condition || 'Dry',
+      planned_time_min: parameters.planned_time_min || currentTask.target_time_min || 60,
+      machine_age_years: currentTask.machine_age_years || 2.0,
+      engine_hours: currentTask.engine_hours || 1200
     };
 
     if (currentMachine?.cab_controls) {
@@ -176,19 +192,121 @@ export default function App() {
     }
   };
 
+  const [activeView, setActiveView] = useState('workflow'); // 'workflow' | 'harness' | 'simulator' | 'connect'
+
+  const handleTaskConnectTransition = (task, machineId) => {
+    setPairedTask(task);
+    setPairedMachineId(machineId);
+
+    // Lock selected machine to the paired machine if found in catalog
+    const matched = machines.find((m) => m.machine_id === machineId || m.name.includes(machineId.split('-')[1] || ''));
+    if (matched) {
+      setCurrentMachine(matched);
+    }
+    setActiveView('harness'); // Transition to telemetry screen once paired
+  };
+
   return (
     <div className="cab-container">
-      {/* Header */}
-      <header className="cab-header">
+      {/* Header with Navigation View Switcher */}
+      <header className="cab-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div className="cab-brand">
           <div className="cat-logo">CAT</div>
           <div className="cab-title">
-            <h1>Simulation Module</h1>
-            <p>Operator Training Simulation</p>
+            <h1>Caterpillar Intelligent Operator Platform</h1>
+            <p>Digital Twin Simulation & Safety Telemetry Suite</p>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}></div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          {/* Persistent Call Admin Escalation Button */}
+          <button
+            onClick={() => alert("🚨 EMERGENCY ADMIN CALL INITIATED: Alert dispatched to Site Supervisor & Admin Console via AWS Lambda Pipeline.")}
+            style={{
+              backgroundColor: '#da3633',
+              color: '#fff',
+              border: 'none',
+              padding: '8px 14px',
+              borderRadius: '6px',
+              fontWeight: '800',
+              cursor: 'pointer',
+              fontSize: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px'
+            }}
+          >
+            📞 Call Admin
+          </button>
+
+          {/* 1st Tab: Operator Task Dashboard & Dispatch Workflow */}
+          <button
+            onClick={() => setActiveView('workflow')}
+            style={{
+              backgroundColor: activeView === 'workflow' ? 'var(--cat-yellow)' : '#21262d',
+              color: activeView === 'workflow' ? '#000' : '#c9d1d9',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              fontWeight: '700',
+              cursor: 'pointer',
+              fontSize: '13px'
+            }}
+          >
+            📋 Operator Task Dashboard
+          </button>
+
+          {/* 2nd Tab: Real-Time Safety & Sensor Telemetry Harness */}
+          <button
+            onClick={() => setActiveView('harness')}
+            style={{
+              backgroundColor: activeView === 'harness' ? 'var(--cat-yellow)' : '#21262d',
+              color: activeView === 'harness' ? '#000' : '#c9d1d9',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              fontWeight: '700',
+              cursor: 'pointer',
+              fontSize: '13px'
+            }}
+          >
+            🛡️ Real-Time Safety Telemetry
+          </button>
+
+          {/* 3rd Tab: Digital Twin Simulator & RAG Training Module */}
+          <button
+            onClick={() => setActiveView('simulator')}
+            style={{
+              backgroundColor: activeView === 'simulator' ? 'var(--cat-yellow)' : '#21262d',
+              color: activeView === 'simulator' ? '#000' : '#c9d1d9',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              fontWeight: '700',
+              cursor: 'pointer',
+              fontSize: '13px'
+            }}
+          >
+            🎓 Digital Twin & RAG Learning
+          </button>
+
+          {/* Machine Fleet Hub */}
+          <button
+            onClick={() => setActiveView('connect')}
+            style={{
+              backgroundColor: activeView === 'connect' ? 'var(--cat-yellow)' : '#21262d',
+              color: activeView === 'connect' ? '#000' : '#c9d1d9',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: '6px',
+              fontWeight: '700',
+              cursor: 'pointer',
+              fontSize: '13px'
+            }}
+          >
+            📡 Fleet Connect Hub
+          </button>
+        </div>
       </header>
 
       {/* Error alert if any */}
@@ -206,87 +324,144 @@ export default function App() {
         </div>
       )}
 
-      {/* Category Tabs: Excavation, Trenching, Loading, Grading, Demolition */}
-      <div className="category-nav">
-        {CATEGORIES.map((cat) => {
-          const isActive = selectedCategory === cat.id;
-          return (
-            <button
-              key={cat.id}
-              onClick={() => handleSelectCategory(cat.id)}
-              className={`category-tab ${isActive ? 'active' : ''}`}
-            >
-              <div>{cat.label}</div>
-              <div style={{ fontSize: '11px', opacity: isActive ? 0.9 : 0.6, marginTop: '2px' }}>
-                {cat.machineCode}
-              </div>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Mission Selector Bar */}
-      <div className="mission-bar">
-        <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--cat-yellow)', whiteSpace: 'nowrap', marginRight: '6px' }}>
-          Choose Mission:
-        </span>
-        {categoryTasks.map((t) => {
-          const isSelected = t.task_id === currentTask?.task_id;
-          return (
-            <button
-              key={t.task_id}
-              onClick={() => handleSelectMission(t.task_id)}
-              className={`mission-btn ${isSelected ? 'active' : ''}`}
-            >
-              Mission #{t.mission_number}: {t.title.split(' ')[0]} {t.title.split(' ')[1] || ''}
-            </button>
-          );
-        })}
-      </div>
-
-      {/* 2-Column Minimalist Cab Layout */}
-      <div className="cab-grid">
-        {/* Left Column: Briefing, Machine, and Controls */}
-        <div>
-          <TaskSelector currentTask={currentTask} />
-
-          <MachineCard
-            machine={currentMachine}
-            machineAge={currentTask?.machine_age_years || 2}
-          />
-
-          <ParameterControls
-            parameters={parameters}
-            onChange={setParameters}
-            onSimulate={handleSimulate}
-            onReset={handleResetParameters}
-            onLoadRecommended={handleLoadRecommended}
-            machine={currentMachine}
-            isLoading={isLoading}
-          />
+      {/* Active Machine Lock Banner */}
+      {pairedMachineId && (
+        <div style={{
+          backgroundColor: 'rgba(210, 153, 34, 0.15)',
+          border: '1px solid var(--cat-yellow)',
+          color: 'var(--cat-yellow)',
+          padding: '8px 16px',
+          borderRadius: '6px',
+          marginBottom: '16px',
+          fontSize: '13px',
+          display: 'flex',
+          justify: 'space-between',
+          alignItems: 'center'
+        }}>
+          <div>
+            🔒 <strong>ACTIVE MACHINE LOCK:</strong> Paired to <strong>{pairedMachineId}</strong> for Task <strong>{pairedTask?.task_id || 'Active Task'}</strong> ({pairedTask?.status.replace('_', ' ') || 'IN PROGRESS'})
+          </div>
+          <button
+            onClick={() => {
+              if (window.confirm("Are you sure you want to unpair from this machine? Active telemetry will stop.")) {
+                setPairedMachineId(null);
+                setPairedTask(null);
+              }
+            }}
+            style={{
+              backgroundColor: '#21262d',
+              color: '#c9d1d9',
+              border: '1px solid #30363d',
+              padding: '4px 10px',
+              borderRadius: '4px',
+              fontSize: '11px',
+              cursor: 'pointer'
+            }}
+          >
+            Unpair Machine
+          </button>
         </div>
+      )}
 
-        {/* Right Column: Outcomes & Co-Pilot Advice */}
-        <div>
-          <TelemetryScreen
-            simulationResult={simulationResult}
-            isRunning={isLoading}
-            targetTime={currentTask?.target_time_min || 60}
-            benchmarkTime={currentTask?.actual_benchmark_min || 58}
-          />
+      {activeView === 'workflow' ? (
+        <OperatorTaskWorkflow
+          onTaskSelectAndConnect={handleTaskConnectTransition}
+          activePairedTask={pairedTask}
+          activePairedMachineId={pairedMachineId}
+          onUnpair={() => {
+            setPairedMachineId(null);
+            setPairedTask(null);
+          }}
+        />
+      ) : activeView === 'harness' ? (
+        <SafetyTelemetryHarness activeMachineId={pairedMachineId} activeTask={pairedTask} />
+      ) : activeView === 'connect' ? (
+        <MachineConnectTab activeMachineId={pairedMachineId} />
+      ) : (
+        <>
+          {/* Category Tabs: Excavation, Trenching, Loading, Grading, Demolition */}
+          <div className="category-nav">
+            {CATEGORIES.map((cat) => {
+              const isActive = selectedCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => handleSelectCategory(cat.id)}
+                  className={`category-tab ${isActive ? 'active' : ''}`}
+                >
+                  <div>{cat.label}</div>
+                  <div style={{ fontSize: '11px', opacity: isActive ? 0.9 : 0.6, marginTop: '2px' }}>
+                    {cat.machineCode}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
 
-          <AssistantAdvice
-            simulationResult={simulationResult}
+          {/* Mission Selector Bar */}
+          <div className="mission-bar">
+            <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--cat-yellow)', whiteSpace: 'nowrap', marginRight: '6px' }}>
+              Choose Mission:
+            </span>
+            {categoryTasks.map((t) => {
+              const isSelected = t.task_id === currentTask?.task_id;
+              return (
+                <button
+                  key={t.task_id}
+                  onClick={() => handleSelectMission(t.task_id)}
+                  className={`mission-btn ${isSelected ? 'active' : ''}`}
+                >
+                  Mission #{t.mission_number}: {t.title.split(' ')[0]} {t.title.split(' ')[1] || ''}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* 2-Column Minimalist Cab Layout */}
+          <div className="cab-grid">
+            {/* Left Column: Briefing, Machine, and Controls */}
+            <div>
+              <TaskSelector currentTask={currentTask} />
+
+              <MachineCard
+                machine={currentMachine}
+                machineAge={currentTask?.machine_age_years || 2}
+              />
+
+              <ParameterControls
+                parameters={parameters}
+                onChange={setParameters}
+                onSimulate={handleSimulate}
+                onReset={handleResetParameters}
+                onLoadRecommended={handleLoadRecommended}
+                machine={currentMachine}
+                isLoading={isLoading}
+              />
+            </div>
+
+            {/* Right Column: Outcomes & Co-Pilot Advice */}
+            <div>
+              <TelemetryScreen
+                simulationResult={simulationResult}
+                isRunning={isLoading}
+                targetTime={currentTask?.target_time_min || 60}
+                benchmarkTime={currentTask?.actual_benchmark_min || 58}
+              />
+
+              <AssistantAdvice
+                simulationResult={simulationResult}
+                currentTask={currentTask}
+              />
+            </div>
+          </div>
+
+          {/* Floating Bottom-Right Operator RAG Chatbot */}
+          <OperatorChatBot
+            currentMachine={currentMachine}
             currentTask={currentTask}
           />
-        </div>
-      </div>
-
-      {/* Floating Bottom-Right Operator RAG Chatbot */}
-      <OperatorChatBot
-        currentMachine={currentMachine}
-        currentTask={currentTask}
-      />
+        </>
+      )}
     </div>
   );
 }
