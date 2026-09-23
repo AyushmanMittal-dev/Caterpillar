@@ -1,0 +1,261 @@
+/* Minimalist Rugged CAT Cab Interface - Relation Module */
+
+:root {
+  --cat-yellow: #FFCD00;
+  --cat-yellow-hover: #E5B800;
+  --bg-dark: #0D1117;
+  --panel-bg: #161B22;
+  --panel-border: #2B313A;
+  --text-main: #FFFFFF;
+  --text-muted: #8B949E;
+  --accent-green: #2EA043;
+  --accent-amber: #D29922;
+  --accent-red: #DA3633;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.cab-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 16px 20px 40px;
+}
+
+/* Header */
+.cab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--cat-yellow);
+}
+
+.cab-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cat-logo {
+  background-color: var(--cat-yellow);
+  color: #000;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.cab-title h1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cab-title p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Category Tabs */
+.category-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 800px) {
+  .category-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.category-tab {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  padding: 10px 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.category-tab:hover {
+  border-color: #484f58;
+  color: #fff;
+}
+
+.category-tab.active {
+  background-color: var(--cat-yellow);
+  color: #000;
+  border-color: var(--cat-yellow);
+  font-weight: 700;
+}
+
+/* Mission Selector Bar */
+.mission-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.mission-btn {
+  background-color: #0D1117;
+  border: 1px solid var(--panel-border);
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.mission-btn.active {
+  background-color: rgba(255, 205, 0, 0.18);
+  border-color: var(--cat-yellow);
+  color: var(--cat-yellow);
+  font-weight: 700;
+}
+
+/* 2-Column Minimalist Layout */
+.cab-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .cab-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Panels */
+.cab-panel {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.panel-header {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Big Operator Action Button */
+.btn-test-settings {
+  width: 100%;
+  background-color: var(--cat-yellow);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.btn-test-settings:hover:not(:disabled) {
+  background-color: var(--cat-yellow-hover);
+  transform: translateY(-1px);
+}
+
+.btn-test-settings:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mode & Hydraulic Button Groups */
+.btn-group-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.opt-btn {
+  background-color: #0D1117;
+  border: 1px solid var(--panel-border);
+  color: var(--text-muted);
+  padding: 10px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.opt-btn:hover {
+  color: #fff;
+  border-color: #555;
+}
+
+.opt-btn.active {
+  background-color: var(--cat-yellow);
+  color: #000;
+  border-color: var(--cat-yellow);
+  font-weight: 700;
+}
+
+/* Range Sliders */
+.cab-slider {
+  width: 100%;
+  accent-color: var(--cat-yellow);
+  height: 8px;
+  background: #21262D;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Telemetry Gauges */
+.telemetry-card {
+  background-color: #0D1117;
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.big-number {
+  font-size: 32px;
+  font-weight: 800;
+  font-family: monospace;
+}

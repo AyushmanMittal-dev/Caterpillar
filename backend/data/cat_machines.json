@@ -1,0 +1,187 @@
+[
+  {
+    "machine_id": "CAT-320",
+    "name": "CAT 320 Next Gen Hydraulic Excavator",
+    "category": "Earth Excavation",
+    "engine_model": "Cat C4.4 ACERT",
+    "net_power_hp": 174,
+    "operating_weight_kg": 22500,
+    "rpm_range": {"min": 1200, "max": 2000, "default": 1750},
+    "power_modes": ["Eco", "Smart", "Power"],
+    "hydraulic_modes": ["Fine", "Medium", "Quick"],
+    "assist_technology": "Cat Grade Assist & 2D E-Fence",
+    "base_fuel_burn_lph": 16.5,
+    "cab_controls": [
+      {
+        "id": "payload_target_pct",
+        "label": "Bucket Fill Level",
+        "type": "slider",
+        "min": 50,
+        "max": 110,
+        "step": 5,
+        "default": 90,
+        "unit": "%",
+        "labels": ["Half (60%)", "Full (90%)", "Heaped (110%)"]
+      },
+      {
+        "id": "dig_priority",
+        "label": "Valve Flow Priority",
+        "type": "buttons",
+        "options": [
+          {"id": "Swing Priority", "label": "Swing", "sub": "Truck Load"},
+          {"id": "Balanced", "label": "Balanced", "sub": "Standard"},
+          {"id": "Boom Power", "label": "Boom", "sub": "Heavy Dig"}
+        ],
+        "default": "Balanced"
+      }
+    ]
+  },
+  {
+    "machine_id": "CAT-420",
+    "name": "CAT 420 Center-Pivot Backhoe Loader",
+    "category": "Trenching",
+    "engine_model": "Cat C3.6 DITA",
+    "net_power_hp": 93,
+    "operating_weight_kg": 8500,
+    "rpm_range": {"min": 1200, "max": 2200, "default": 1650},
+    "power_modes": ["Eco", "Smart", "Power"],
+    "hydraulic_modes": ["Fine", "Medium", "Quick"],
+    "assist_technology": "Cat Differential Lock & Boom Float",
+    "base_fuel_burn_lph": 9.2,
+    "cab_controls": [
+      {
+        "id": "payload_target_pct",
+        "label": "Bucket Fill Level",
+        "type": "slider",
+        "min": 50,
+        "max": 105,
+        "step": 5,
+        "default": 80,
+        "unit": "%",
+        "labels": ["Light (70%)", "Full (85%)", "Heaped (105%)"]
+      },
+      {
+        "id": "stabilizer_stance",
+        "label": "Stabilizer Down-Pressure",
+        "type": "buttons",
+        "options": [
+          {"id": "Soft Ground", "label": "Soft Mud", "sub": "Wide Pad"},
+          {"id": "Standard", "label": "Standard", "sub": "Firm Dirt"},
+          {"id": "Locked Down", "label": "Locked", "sub": "Deep Trench"}
+        ],
+        "default": "Standard"
+      }
+    ]
+  },
+  {
+    "machine_id": "CAT-950M",
+    "name": "CAT 950M Medium Wheel Loader",
+    "category": "Material Loading",
+    "engine_model": "Cat C7.1 ACERT",
+    "net_power_hp": 250,
+    "operating_weight_kg": 19213,
+    "rpm_range": {"min": 1300, "max": 2100, "default": 1700},
+    "power_modes": ["Eco", "Smart", "Power"],
+    "hydraulic_modes": ["Fine", "Medium", "Quick"],
+    "assist_technology": "Cat Production Measurement (Payload) & Auto-Dig",
+    "base_fuel_burn_lph": 18.0,
+    "cab_controls": [
+      {
+        "id": "payload_target_pct",
+        "label": "Bucket Fill Level",
+        "type": "slider",
+        "min": 50,
+        "max": 110,
+        "step": 5,
+        "default": 90,
+        "unit": "%",
+        "labels": ["Half (60%)", "Full (90%)", "Heaped (110%)"]
+      },
+      {
+        "id": "rimpull_control",
+        "label": "Rimpull (Tire Anti-Slip)",
+        "type": "buttons",
+        "options": [
+          {"id": "60% Mud", "label": "60%", "sub": "Wet Mud"},
+          {"id": "80% Gravel", "label": "80%", "sub": "Loose Stone"},
+          {"id": "100% Max", "label": "100%", "sub": "Dry Concrete"}
+        ],
+        "default": "80% Gravel"
+      }
+    ]
+  },
+  {
+    "machine_id": "CAT-140",
+    "name": "CAT 140 All-Wheel Drive Motor Grader",
+    "category": "Grading",
+    "engine_model": "Cat C9.3 ACERT",
+    "net_power_hp": 250,
+    "operating_weight_kg": 19135,
+    "rpm_range": {"min": 1200, "max": 2000, "default": 1600},
+    "power_modes": ["Eco", "Smart", "Power"],
+    "hydraulic_modes": ["Fine", "Medium", "Quick"],
+    "assist_technology": "Cat Grade with Cross Slope & Stable Blade",
+    "base_fuel_burn_lph": 17.5,
+    "cab_controls": [
+      {
+        "id": "blade_angle",
+        "label": "Moldboard Blade Angle",
+        "type": "buttons",
+        "options": [
+          {"id": "Spread 25°", "label": "Spread (25°)", "sub": "Spreading"},
+          {"id": "Normal 35°", "label": "Normal (35°)", "sub": "Finish Grade"},
+          {"id": "Deep Cut 45°", "label": "Deep Cut (45°)", "sub": "Ditching"}
+        ],
+        "default": "Normal 35°"
+      },
+      {
+        "id": "working_gear",
+        "label": "Working Transmission Gear",
+        "type": "buttons",
+        "options": [
+          {"id": "1st Gear", "label": "1st", "sub": "Fine Finish"},
+          {"id": "2nd Gear", "label": "2nd", "sub": "Normal Run"},
+          {"id": "3rd Gear", "label": "3rd", "sub": "Fast Travel"}
+        ],
+        "default": "2nd Gear"
+      }
+    ]
+  },
+  {
+    "machine_id": "CAT-349",
+    "name": "CAT 349 High-Reach Demolition Excavator",
+    "category": "Demolition",
+    "engine_model": "Cat C13 ACERT",
+    "net_power_hp": 432,
+    "operating_weight_kg": 53200,
+    "rpm_range": {"min": 1300, "max": 2200, "default": 1800},
+    "power_modes": ["Eco", "Smart", "Power"],
+    "hydraulic_modes": ["Fine", "Medium", "Quick"],
+    "assist_technology": "Cat Hydraulic Relief Protection & Heavy Lift",
+    "base_fuel_burn_lph": 34.0,
+    "cab_controls": [
+      {
+        "id": "tool_flow_rate",
+        "label": "Attachment Hydraulic Flow",
+        "type": "buttons",
+        "options": [
+          {"id": "Low Flow", "label": "Low", "sub": "Light Breaker"},
+          {"id": "Medium Flow", "label": "Medium", "sub": "Pulverizer"},
+          {"id": "High Flow", "label": "High", "sub": "Heavy Shear"}
+        ],
+        "default": "Medium Flow"
+      },
+      {
+        "id": "duty_cycle_pct",
+        "label": "Tool Work Duty Cycle",
+        "type": "slider",
+        "min": 65,
+        "max": 100,
+        "step": 5,
+        "default": 85,
+        "unit": "%",
+        "labels": ["Cautious (70%)", "Steady (85%)", "Continuous (100%)"]
+      }
+    ]
+  }
+]
